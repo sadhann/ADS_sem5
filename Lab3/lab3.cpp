@@ -2,7 +2,7 @@
 #include<vector>
 
 
-//using namespace std;
+
 class UnionFind
 { 
 	int n; 
@@ -76,7 +76,7 @@ int island(std::vector<std::vector<int>>a)
 				temp->Union(root, (j - 1) * m + k - 1); 
 		} 
 	} 
-	int *f = new int[n * m];    // by default all frequencies are taken as zero 
+	int *f = new int[n * m];    
 	int count = 0; 
 	for (int i = 0; i < n; i++) 
 	{ 
@@ -89,8 +89,7 @@ int island(std::vector<std::vector<int>>a)
 				{ 
 					count++; 
 					f[x]++;
-					//cout<<"here" ;
-				} 
+					
 				else
 					f[x]++; 
 			} 
@@ -101,12 +100,7 @@ int island(std::vector<std::vector<int>>a)
 
 int main(void) 
 { 
-	std::vector<std::vector<int>>a; //={{1, 1, 0, 0, 0}, 
-    //                                  {0, 1, 0, 0, 1}, 
-    //                                  {1, 0, 0, 1, 1}, 
-    //                                  {0, 0, 0, 0, 0}, 
-    //                                  {1, 0, 1, 0, 1}}; 
-
+	std::vector<std::vector<int>>a;
 	int n,m,num;
 	std::cout<<"No of rows : ";
 	std::cin>>n;
